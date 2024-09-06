@@ -23,17 +23,19 @@ class BaseApplication : Application() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel =
                 NotificationChannel(DEFAULT, DEFAULT_NAME, NotificationManager.IMPORTANCE_DEFAULT)
+
             val silentChannel =
                 NotificationChannel(SILENT, SILENT_NAME, NotificationManager.IMPORTANCE_LOW)
+
             val urgentChannel =
                 NotificationChannel(URGENT, URGENT_NAME, NotificationManager.IMPORTANCE_HIGH)
+
             val notificationManager =
                 getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
             notificationManager.createNotificationChannel(silentChannel)
             notificationManager.createNotificationChannel(urgentChannel)
         }
-
     }
 
 }

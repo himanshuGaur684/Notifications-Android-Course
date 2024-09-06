@@ -12,16 +12,19 @@ fun silentNotification(context: Context){
     val notification = NotificationCompat.Builder(context, SILENT)
         .setSmallIcon(R.drawable.ic_launcher_background)
         .setContentTitle("title")
-        .setContentText("description")
+        .setContentText("desc")
         .build()
 
-    if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.TIRAMISU){
-        if(ContextCompat.checkSelfPermission(context, POST_NOTIFICATIONS)== PackageManager.PERMISSION_GRANTED){
-            NotificationManagerCompat.from(context)
-                .notify(1,notification)
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        if (ContextCompat.checkSelfPermission(
+                context,
+                POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            NotificationManagerCompat.from(context).notify(2,notification)
         }
     }else{
-        NotificationManagerCompat.from(context)
-            .notify(1,notification)
+        NotificationManagerCompat.from(context).notify(2,notification)
     }
 }

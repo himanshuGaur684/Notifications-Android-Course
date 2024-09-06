@@ -33,19 +33,46 @@ class MainActivity : ComponentActivity() {
                     ) {
 
                         Button(onClick = { simpleNotification(this@MainActivity) }) {
-                            Text(text = "Simple notification")
+                            Text(text = "Simple Notifications")
                         }
-
                         Spacer(modifier = Modifier.height(12.dp))
 
                         Button(onClick = { silentNotification(this@MainActivity) }) {
                             Text(text = "Silent Notification")
                         }
-
                         Spacer(modifier = Modifier.height(12.dp))
 
                         Button(onClick = { urgentNotification(this@MainActivity) }) {
                             Text(text = "Urgent Notification")
+                        }
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Button(onClick = { groupNotification(this@MainActivity) }) {
+                            Text(text = "Group Notification")
+                        }
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Button(onClick = { actionNotifications(this@MainActivity) }) {
+                            Text(text = "Actions Notification")
+                        }
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Button(onClick = { bigTextStyle(this@MainActivity) }) {
+                            Text(text = "BigTExt Notification")
+                        }
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Button(onClick = { bigPictureStyle(this@MainActivity) }) {
+                            Text(text = "BigPicture Notification")
+                        }
+
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Button(onClick = { inBoxStyle(this@MainActivity) }) {
+                            Text(text = "Inbox Notification")
                         }
 
                     }
