@@ -36,6 +36,22 @@
             android:enabled="true"
             android:exported="false" />
 
+
+        <receiver
+            android:name=".Prev"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".Next"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".PlayAndPause"
+
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>
