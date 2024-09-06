@@ -74,6 +74,11 @@ class MainActivity : ComponentActivity() {
                         Button(onClick = { inBoxStyle(this@MainActivity) }) {
                             Text(text = "Inbox Notification")
                         }
+                        Spacer(modifier = Modifier.height(12.dp))
+
+                        Button(onClick = { message(this@MainActivity) }) {
+                            Text(text = "Message Notification")
+                        }
 
                     }
                 }
